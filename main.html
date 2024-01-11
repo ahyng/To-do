@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +10,15 @@
 <body>
     <div id="grid">
         <!--시계-->
-        <div id="clock">a</div>
+        <div id="clock"></div>
         <!--Todo-->
-        <div id="todo"></div>
+        <div id="todo">
+            <input id="input" type="text" style="font-size: 50px;">
+            <button id="btn" style="font-size: 50px; cursor: pointer;">+</button>
+            <div id="lst"></div>
+        </div>
     </div>
-    <script src="main.js"></script>
+    <script src="clock.js"></script>
+    <script src="todo.js"></script>
 </body>
 </html>

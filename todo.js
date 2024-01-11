@@ -9,10 +9,19 @@ btn.addEventListener("click", function add() {
     let create = document.createElement("li");
     let del = document.createElement("button");
     del.style.fontSize="40px";
-    create.innerHTML = input.value + " ";
+    create.innerHTML = input.value + "&nbsp;";
     del.innerHTML = "X";
     lst.appendChild(create);
     create.appendChild(del);
     input.value = "";
+    create.style.cursor="pointer";
+    del.style.cursor="pointer";
+
+    create.addEventListener("click", function() {
+        create.style.color="#c2c2c2";
+    })
+
     }
 })
+
+

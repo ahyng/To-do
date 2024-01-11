@@ -15,6 +15,7 @@ const clock = function() {
 
     let today = month+1 + "." + d + " " + getday[day];
 
-    document.getElementById("clock").innerHTML = today + "<br>" + hour + ":" + minute + ":" + second;
+    document.getElementById("date").innerHTML = today;
+    document.getElementById("time").innerHTML = hour + ":" + minute + ":" + second;
 }
 setInterval(clock, 1000);

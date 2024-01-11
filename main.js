@@ -9,7 +9,7 @@ const clock = function() {
     let minute = date.getMinutes();
     let second = date.getSeconds();
 
-    let today = month+1 + "/" + d + "/" + getday[day];
+    let today = month+1 + "." + d + "." + getday[day];
 
     document.getElementById("clock").innerHTML = today + " " + hour + ":" + minute + ":" + second;
 }

@@ -23,6 +23,16 @@ btn.addEventListener("click", function add() {
         check.style.float="left";
         check.style.top="6.5px";
         check.style.zoom="2.2";
+        check.style.cursor="pointer";
+        check.style.accentColor="rgba(121, 121, 121, 0.5)";
+
+        check.addEventListener("click", function(){
+            if (check.checked){
+                list.style.color="rgb(155, 155, 155)";
+            } else{
+                list.style.color="black";
+            }
+        })
 
         //list에 글씨 넣기
         list.innerText = input.value;
@@ -40,11 +50,21 @@ btn.addEventListener("click", function add() {
         del.style.fontSize="30px";
         del.style.float="right";
         del.style.position="relative";
-        del.style.top="16px";
+        del.style.top="17px";
         del.style.right="10px";
+        del.style.backgroundColor= "rgba(169, 188, 203, 0.752)";
         del.style.border="none";
         del.style.cursor="pointer";
+        del.addEventListener("mouseover", function(){
+            del.style.backgroundColor="rgba(51, 64, 75, 0.752)";
+            del.style.color="white";
+        })
+        del.addEventListener("mouseout", function(){
+            del.style.backgroundColor="rgba(169, 188, 203, 0.752)";
+            del.style.color="black";
+        })
 
+    
         //위의 것들을 lst(div) 에 넣기
         lst.appendChild(li);
     }

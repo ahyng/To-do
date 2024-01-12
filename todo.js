@@ -9,16 +9,33 @@ btn.addEventListener("click", function add() {
         alert("내용을 입력해 주세요.")
     } else {
         //새로운 li, span 생성
-        const li = document.createElement("li");
+        const li = document.createElement("div");
         const list = document.createElement("span");
         //<li><span></span></li>
         li.appendChild(list);
+
         //list에 글씨 넣기
         list.innerText = input.value;
-        //위의 것들을 lst(div) 에 넣기
-        lst.appendChild(li);
+        li.style.border="solid 0.5px rgba(255, 255, 255, 0.668)";
+        
         //입력창 비우기
         input.value = "";
+
+        //삭제 버튼
+        const del = document.createElement("button");
+        del.innerText = " X ";
+        li.appendChild(del);
+
+        //del 버튼 style 속성
+        del.style.fontSize="35px";
+        del.style.float="right";
+        del.style.position="relative";
+        del.style.top="15px";
+        del.style.right="10px";
+        del.style.cursor="pointer";
+
+        //위의 것들을 lst(div) 에 넣기
+        lst.appendChild(li);
     }
 })
 

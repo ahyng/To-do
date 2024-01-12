@@ -1,8 +1,10 @@
+/*시계와 todo 모두의 속성*/
 #group{
     position:relative;
     top:100px;
 }
 
+/*시계 속성*/
 #date{
     font-size: 60px;
     font-weight: 500;
@@ -13,6 +15,7 @@
     font-weight: 500;
 }
 
+/*입력창 속성*/
 #input{
     border-width: 0 0 3px;
     background-color: rgba(255, 255, 255, 0.412);
@@ -23,6 +26,7 @@
     color:rgb(175, 176, 178);
 }
 
+/*추가 버튼 속성*/
 #btn{
     border: solid rgba(255, 255, 255, 0.737);
     background-color: rgba(240, 248, 255, 0.476);
@@ -33,6 +37,13 @@
     background-color: rgba(240, 248, 255, 0.752);
 }
 
+#lst{
+    font-size: 50px; background-color: rgba(240, 248, 255, 0.426); 
+    margin-left: 590px; margin-right: 590px;
+    border: solid 3px rgba(255, 255, 255, 0.668);
+}
+
+/*전체 속성*/
 body{
     background-image: url('https://cdn.pixabay.com/photo/2020/02/17/05/17/snow-4855454_640.jpg');
     background-size:cover;

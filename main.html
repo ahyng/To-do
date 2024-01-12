@@ -16,11 +16,14 @@
         </div>
         <!--Todo-->
         <div id="todo">
-            <input id="input" placeholder="to-do" type="text" style="font-size: 50px;">
+            <!--입력창-->
+            <input id="input" placeholder="to-do" type="text" style="font-size: 50px;" maxlength='23'>
             <button id="btn" style="font-size: 50px; cursor: pointer;">&nbsp+&nbsp</button>
-            <div id="lst" style="font-size: 50px; background-color: 
-            rgba(240, 248, 255, 0.426); margin-left: 590px; margin-right: 590px;"></div>
+
+            <!--입력된 것들 표시할 공간-->
+            <div id="lst"></div>
         </div>
+
     </div>
     <script src="clock.js"></script>
     <script src="todo.js"></script>

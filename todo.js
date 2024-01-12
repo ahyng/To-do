@@ -11,27 +11,38 @@ btn.addEventListener("click", function add() {
         //새로운 li, span 생성
         const li = document.createElement("div");
         const list = document.createElement("span");
+        const check = document.createElement("input")
+        check.type="checkbox";
         //<li><span></span></li>
         li.appendChild(list);
 
+        //checkbox 생성
+        li.appendChild(check);
+        //checkbox style 속성
+        check.style.position="relative";
+        check.style.float="left";
+        check.style.top="6.5px";
+        check.style.zoom="2.2";
+
         //list에 글씨 넣기
         list.innerText = input.value;
-        li.style.border="solid 0.5px rgba(255, 255, 255, 0.668)";
+        //li.style.border="solid 0.5px rgba(255, 255, 255, 0.668)";
         
         //입력창 비우기
         input.value = "";
 
         //삭제 버튼
         const del = document.createElement("button");
-        del.innerText = " X ";
+        del.innerText = "X";
         li.appendChild(del);
 
         //del 버튼 style 속성
-        del.style.fontSize="35px";
+        del.style.fontSize="30px";
         del.style.float="right";
         del.style.position="relative";
-        del.style.top="15px";
+        del.style.top="16px";
         del.style.right="10px";
+        del.style.border="none";
         del.style.cursor="pointer";
 
         //위의 것들을 lst(div) 에 넣기

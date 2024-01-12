@@ -40,7 +40,7 @@
 #lst{
     font-size: 50px; background-color: rgba(240, 248, 255, 0.426); 
     margin-left: 590px; margin-right: 590px;
-    border: solid 3px rgba(255, 255, 255, 0.668);
+    border: solid 2px rgba(255, 255, 255, 0.668);
 }
 
 /*전체 속성*/

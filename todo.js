@@ -16,6 +16,10 @@ btn.addEventListener("click", function add() {
         //<li><span></span></li>
         li.appendChild(list);
 
+        li.style.borderBottom="solid 2px white";
+        lst.style.padding="10px"; // list에 요소가 있을 때만 padding이 적용되게
+
+
         //checkbox 생성
         li.appendChild(check);
         //checkbox style 속성
@@ -26,6 +30,7 @@ btn.addEventListener("click", function add() {
         check.style.cursor="pointer";
         check.style.accentColor="rgba(121, 121, 121, 0.5)";
 
+        //체크하면 글씨 연하게
         check.addEventListener("click", function(){
             if (check.checked){
                 list.style.color="rgb(155, 155, 155)";
@@ -55,6 +60,8 @@ btn.addEventListener("click", function add() {
         del.style.backgroundColor= "rgba(169, 188, 203, 0.752)";
         del.style.border="none";
         del.style.cursor="pointer";
+
+        //del 버튼 mouseover/mouseout시 반응
         del.addEventListener("mouseover", function(){
             del.style.backgroundColor="rgba(51, 64, 75, 0.752)";
             del.style.color="white";

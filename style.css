@@ -40,10 +40,13 @@
     background-color: rgba(240, 248, 255, 0.752);
 }
 
+
+/*입력한 것들 표시하는 공간 style 속성 */
 #lst{
-    font-size: 50px; background-color: rgba(240, 248, 255, 0.426); 
+    font-size: 45px; background-color: rgba(240, 248, 255, 0.547); 
     margin-left: 590px; margin-right: 590px;
     /*border: solid 2px rgba(255, 255, 255, 0.668);*/
+    /*padding:10px;*/
 }
 
 /*전체 속성*/

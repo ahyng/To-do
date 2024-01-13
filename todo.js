@@ -4,8 +4,17 @@ let input = document.getElementById('input');
 let lst = document.getElementById('lst');
 
 let i = 0;
+
+
+//enter 눌러도 버튼 누른 것처럼 작용
+document.getElementById("input").addEventListener("keyup", function(e) {
+    if (e.code == "Enter") {
+        document.getElementById("btn").onclick();
+    }
+});
+
 //버튼을 눌렀을 때
-btn.addEventListener("click", function add() {
+btn.onclick = function add() {
     if (input.value == ''){ // 입력창이 비어있다면
         alert("내용을 입력해 주세요.")
     } else {
@@ -18,7 +27,7 @@ btn.addEventListener("click", function add() {
         li.appendChild(list);
 
         li.style.borderBottom="solid 2px white";
-        lst.style.padding="10px"; // list에 요소가 있을 때만 padding이 적용되게
+        li.style.padding="10px"; // li 에 padding 을 적용해야 일정하게 적용됨.(lst는 일정하게 적용이 안되는 것을 확인함)
 
 
         //checkbox 생성
@@ -58,7 +67,7 @@ btn.addEventListener("click", function add() {
         del.style.fontSize="30px";
         del.style.float="right";
         del.style.position="relative";
-        del.style.top="17px";
+        del.style.top="14px";
         del.style.right="10px";
         del.style.backgroundColor= "rgba(169, 188, 203, 0.752)";
         del.style.border="none";
@@ -79,17 +88,18 @@ btn.addEventListener("click", function add() {
         lst.appendChild(li);
         i += 1;
 
+        // del 버튼 누르면 삭제
         del.addEventListener("click", function deleteList(event) {
             const deleteOne = event.target.parentElement;
             deleteOne.remove();
             i -= 1;
-            if (i == 0){
+            if (i == 0){ //다 지웠을 때 padding 부분이 남지 않도록
                 lst.style.padding="0px";
             }
 
         });
     }
-})
+}
 
 
 

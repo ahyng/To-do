@@ -53,7 +53,7 @@
 
 /*입력한 것들 표시하는 공간 style 속성 */
 #lst{
-    font-size: 45px; background-color: rgba(240, 248, 255, 0.547); 
+    font-size: 40px; background-color: rgba(240, 248, 255, 0.547); 
     margin-left: 590px; margin-right: 592px;
     /*border: solid 2px rgba(255, 255, 255, 0.668);*/
     /*padding:10px; // list에 요소가 있을 때만 padding이 적용되게*/

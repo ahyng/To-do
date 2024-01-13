@@ -3,6 +3,7 @@ let btn = document.getElementById('btn');
 let input = document.getElementById('input');
 let lst = document.getElementById('lst');
 
+let i = 0;
 //버튼을 눌렀을 때
 btn.addEventListener("click", function add() {
     if (input.value == ''){ // 입력창이 비어있다면
@@ -42,6 +43,8 @@ btn.addEventListener("click", function add() {
         //list에 글씨 넣기
         list.innerText = input.value;
         //li.style.border="solid 0.5px rgba(255, 255, 255, 0.668)";
+
+        //localStorage.setItem(i, input.value);
         
         //입력창 비우기
         input.value = "";
@@ -74,7 +77,22 @@ btn.addEventListener("click", function add() {
     
         //위의 것들을 lst(div) 에 넣기
         lst.appendChild(li);
+        i += 1;
+
+        del.addEventListener("click", function deleteList(event) {
+            const deleteOne = event.target.parentElement;
+            deleteOne.remove();
+            i -= 1;
+            if (i == 0){
+                lst.style.padding="0px";
+            }
+
+        });
     }
 })
+
+
+
+
 
 

@@ -19,7 +19,14 @@
 #input{
     border-width: 0 0 3px;
     background-color: rgba(255, 255, 255, 0.412);
+    /*padding-left:32px;
+    padding-right:32px;*/
+    padding-top:15px;
+    padding-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+    line-height: normal;
 }
+
 
 #input:focus {outline: none;}
 #input::placeholder{
@@ -31,7 +38,10 @@
     border: solid rgba(255, 255, 255, 0.737);
     background-color: rgba(240, 248, 255, 0.476);
     font-weight: 500;
-    color:rgb(91, 90, 90)
+    color:rgb(91, 90, 90);
+    position: relative;
+    top:3.5px;
+
 }
 
 
@@ -44,9 +54,9 @@
 /*입력한 것들 표시하는 공간 style 속성 */
 #lst{
     font-size: 45px; background-color: rgba(240, 248, 255, 0.547); 
-    margin-left: 590px; margin-right: 590px;
+    margin-left: 590px; margin-right: 592px;
     /*border: solid 2px rgba(255, 255, 255, 0.668);*/
-    /*padding:10px;*/
+    /*padding:10px; // list에 요소가 있을 때만 padding이 적용되게*/
 }
 
 /*전체 속성*/

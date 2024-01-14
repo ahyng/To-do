@@ -2,9 +2,37 @@
 let btn = document.getElementById('btn');
 let input = document.getElementById('input');
 let lst = document.getElementById('lst');
-let todos = [];
-let i = 0;
 
+let i = localStorage.length;
+if (i != 0){
+    var todos = JSON.parse(localStorage.getItem('todos'));
+    const savedTodoList = JSON.parse(localStorage.getItem('todos'));
+
+    if (savedTodoList) { // 로컬에서 데이터 가져오기
+        for(let i = 0; i < savedTodoList.length; i++){
+            add(savedTodoList[i])
+        }
+    }
+    i = todos.length;
+
+    console.log(savedTodoList)
+    
+} else {
+    var todos = [];
+}
+
+//enter 눌러도 버튼 누른 것과 동일하게 작용
+document.getElementById("input").addEventListener("keyup", function(e) {
+    if (e.code == "Enter") {
+        if (input.value == ''){ // 입력창이 비어있다면
+            alert("내용을 입력해 주세요.")
+        } else {
+            todos.push(input.value);
+            add(input.value);
+            localStorage.setItem("todos", JSON.stringify(todos));
+        }
+    }
+});
 
 btn.addEventListener("click", function create(){
     if (input.value == ''){ // 입력창이 비어있다면
@@ -16,12 +44,7 @@ btn.addEventListener("click", function create(){
     }
 });
 
-//enter 눌러도 버튼 누른 것과 동일하게 작용
-document.getElementById("input").addEventListener("keyup", function(e) {
-    if (e.code == "Enter") {
-        document.getElementById("btn").onclick();
-    }
-});
+
 
 //버튼을 눌렀을 때
 function add(createOne) {
@@ -99,7 +122,19 @@ function add(createOne) {
         // del 버튼 누르면 삭제
         del.addEventListener("click", function deleteList(event) {
             const deleteOne = event.target.parentElement;
+            
+            const arr = JSON.parse(localStorage.getItem("todos")) || [];
+            const element = deleteOne.querySelector("span");
+            const textToFind = element.textContent || element.innerText;
+            const index = arr.findIndex(item => item === textToFind);
+
             deleteOne.remove();
+
+            if (todos && todos.length > 0){
+                todos.splice(index, 1);
+            }
+            savedTodoList = localStorage.setItem('todos', JSON.stringify(todos));
+
             i -= 1;
             if (i == 0){ //다 지웠을 때 padding 부분이 남지 않도록
                 lst.style.padding="0px";
@@ -109,15 +144,7 @@ function add(createOne) {
     }
 
 
-const savedTodoList = JSON.parse(localStorage.getItem('todos'));
 
-if (savedTodoList) { // 로컬에서 데이터 가져오기
-    for(let i = 0; i < savedTodoList.length; i++){
-        add(savedTodoList[i])
-    }
-}
-
-console.log(savedTodoList)
 
 
 

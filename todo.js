@@ -57,7 +57,8 @@ function add(createOne) {
         li.appendChild(list);
 
         li.style.borderBottom="solid 2px white";
-        li.style.padding="10px"; // li 에 padding 을 적용해야 일정하게 적용됨.(lst는 일정하게 적용이 안되는 것을 확인함)
+        li.style.paddingTop="18px";
+        li.style.paddingBottom="7px"; // li 에 padding 을 적용해야 일정하게 적용됨.(lst는 일정하게 적용이 안되는 것을 확인함)
 
 
         //checkbox 생성
@@ -65,7 +66,7 @@ function add(createOne) {
         //checkbox style 속성
         check.style.position="relative";
         check.style.float="left";
-        check.style.top="6.5px";
+        check.style.top="0.5px";
         check.style.zoom="2.2";
         check.style.cursor="pointer";
         check.style.accentColor="rgba(121, 121, 121, 0.5)";
@@ -98,7 +99,7 @@ function add(createOne) {
         del.style.fontSize="30px";
         del.style.float="right";
         del.style.position="relative";
-        del.style.top="14px";
+        del.style.top="0.5px";
         del.style.right="10px";
         del.style.backgroundColor= "rgba(169, 188, 203, 0.752)";
         del.style.border="none";

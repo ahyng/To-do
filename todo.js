@@ -2,11 +2,21 @@
 let btn = document.getElementById('btn');
 let input = document.getElementById('input');
 let lst = document.getElementById('lst');
-
+let todos = [];
 let i = 0;
 
 
-//enter 눌러도 버튼 누른 것처럼 작용
+btn.addEventListener("click", function create(){
+    if (input.value == ''){ // 입력창이 비어있다면
+        alert("내용을 입력해 주세요.")
+    } else {
+        todos.push(input.value);
+        add(input.value);
+        localStorage.setItem("todos", JSON.stringify(todos));
+    }
+});
+
+//enter 눌러도 버튼 누른 것과 동일하게 작용
 document.getElementById("input").addEventListener("keyup", function(e) {
     if (e.code == "Enter") {
         document.getElementById("btn").onclick();
@@ -14,10 +24,7 @@ document.getElementById("input").addEventListener("keyup", function(e) {
 });
 
 //버튼을 눌렀을 때
-btn.onclick = function add() {
-    if (input.value == ''){ // 입력창이 비어있다면
-        alert("내용을 입력해 주세요.")
-    } else {
+function add(createOne) {
         //새로운 li, span 생성
         const li = document.createElement("div");
         const list = document.createElement("span");
@@ -50,7 +57,8 @@ btn.onclick = function add() {
         })
 
         //list에 글씨 넣기
-        list.innerText = input.value;
+        list.innerText = createOne;
+     
         //li.style.border="solid 0.5px rgba(255, 255, 255, 0.668)";
 
         //localStorage.setItem(i, input.value);
@@ -99,10 +107,17 @@ btn.onclick = function add() {
 
         });
     }
+
+
+const savedTodoList = JSON.parse(localStorage.getItem('todos'));
+
+if (savedTodoList) { // 로컬에서 데이터 가져오기
+    for(let i = 0; i < savedTodoList.length; i++){
+        add(savedTodoList[i])
+    }
 }
 
-
-
+console.log(savedTodoList)
 
 
 

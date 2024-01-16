@@ -4,6 +4,11 @@ let input = document.getElementById('input');
 let lst = document.getElementById('lst');
 
 let i = localStorage.length;
+
+if (localStorage.getItem('todos') !== '[]'){
+    document.getElementById("menual").style.display = "none";
+}
+
 if (i != 0){
     var todos = JSON.parse(localStorage.getItem('todos'));
     const savedTodoList = JSON.parse(localStorage.getItem('todos'));
@@ -148,7 +153,6 @@ function add(createOne) {
 
         });
     }
-
 
 
 

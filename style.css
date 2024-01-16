@@ -12,9 +12,14 @@
   }
 
 #input[type=text]{
-    font-family: "Jua", sans-serif;
+    font-family: "Jua", "Poor Story", sans-serif;
     font-weight: 400;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'Jua';
+    src: url('Jua-Regular.ttf');
 }
 
 /*시계 속성*/
@@ -40,6 +45,25 @@
     line-height: normal;
     margin-bottom: 7px;
 }
+
+.jua-regular {
+    font-family: "Jua", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.dongle-regular {
+    font-family: "Dongle", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.poor-story-regular {
+    font-family: "Poor Story", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
 
 
 #input:focus {outline: none;}
@@ -79,7 +103,7 @@ body{
     background-color: rgb(144, 178, 207);
     background-size:cover;
 
-    font-family: "Jua", sans-serif;
+    font-family: "Jua", 'Poor Story', sans-serif;
     font-weight:400;
     font-style: normal;
 

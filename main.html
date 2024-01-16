@@ -8,10 +8,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Jua&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Jua&family=Poor+Story&display=swap" rel="stylesheet">
 
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 </head>
 <body>
     <div id="group" style="text-align: center;">
@@ -23,10 +22,12 @@
         
         <!--Todo-->
         <div id="todo">
+            <div id="input group" style="position:relative; margin:auto; text-size-adjust: auto; flex:auto;">
             <!--입력창-->
-            <input id="input" placeholder="입력" type="text" style="font-size:40px;" 
-            maxlength='20' size="20" autocomplete='off' autofocus>
-            <button id="btn" style="font-size: 60px; cursor: pointer;">&nbsp+&nbsp</button>
+                <input id="input" placeholder="입력" type="text" style="font-size:40px;" 
+                maxlength="20" autocomplete="off" autofocus>
+                <button id="btn" style="font-size: 60px; cursor: pointer;">&nbsp+&nbsp</button>
+            </div>
 
             <div id="menual" style="font-size: 40px; color:rgba(255, 255, 255, 0.494); 
             display: block; line-height:70%;"><br>할 일을 입력하세요</div>

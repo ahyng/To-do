@@ -68,7 +68,7 @@
 /*입력한 것들 표시하는 공간 style 속성 */
 #lst{
     font-size: 40px; background-color: rgba(240, 248, 255, 0.547); 
-    margin-left: 585px; margin-right: 587px;
+    margin-left: 579px; margin-right: 579px;
     /*border: solid 2px rgba(255, 255, 255, 0.668);*/
     /*padding:10px; // list에 요소가 있을 때만 padding이 적용되게*/
 }
@@ -82,6 +82,12 @@ body{
     font-family: "Jua", sans-serif;
     font-weight:400;
     font-style: normal;
+
+    -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+ display: none;
 }
 
 

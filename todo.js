@@ -27,6 +27,7 @@ document.getElementById("input").addEventListener("keyup", function(e) {
         if (input.value == ''){ // 입력창이 비어있다면
             alert("내용을 입력해 주세요.")
         } else {
+            document.getElementById("menual").style.display = "none";
             todos.push(input.value);
             add(input.value);
             localStorage.setItem("todos", JSON.stringify(todos));
@@ -38,6 +39,7 @@ btn.addEventListener("click", function create(){
     if (input.value == ''){ // 입력창이 비어있다면
         alert("내용을 입력해 주세요.")
     } else {
+        document.getElementById("menual").style.display = "none";
         todos.push(input.value);
         add(input.value);
         localStorage.setItem("todos", JSON.stringify(todos));
@@ -59,6 +61,8 @@ function add(createOne) {
         li.style.borderBottom="solid 2px white";
         li.style.paddingTop="18px";
         li.style.paddingBottom="13px"; // li 에 padding 을 적용해야 일정하게 적용됨.(lst는 일정하게 적용이 안되는 것을 확인함)
+
+        
 
 
         //checkbox 생성
@@ -139,6 +143,7 @@ function add(createOne) {
             i -= 1;
             if (i == 0){ //다 지웠을 때 padding 부분이 남지 않도록
                 lst.style.padding="0px";
+                document.getElementById("menual").style.display = "block";
             }
 
         });

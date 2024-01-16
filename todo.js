@@ -57,8 +57,8 @@ function add(createOne) {
         li.appendChild(list);
 
         li.style.borderBottom="solid 2px white";
-        li.style.paddingTop="15px";
-        li.style.paddingBottom="10px"; // li 에 padding 을 적용해야 일정하게 적용됨.(lst는 일정하게 적용이 안되는 것을 확인함)
+        li.style.paddingTop="18px";
+        li.style.paddingBottom="13px"; // li 에 padding 을 적용해야 일정하게 적용됨.(lst는 일정하게 적용이 안되는 것을 확인함)
 
 
         //checkbox 생성
